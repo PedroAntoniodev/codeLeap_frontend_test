@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import * as S from "./styles";
+import { Button } from "../../styles/Button";
 
 const HomePage = () => {
   const [username, setUsername] = useState("");
@@ -29,9 +30,9 @@ const HomePage = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <S.Button type="submit" disabled={!username.trim()}>
+          <Button type="submit" disabled={!username.trim()}>
             ENTER
-          </S.Button>
+          </Button>
         </S.Form>
       </S.Card>
     </S.HomePageContainer>
