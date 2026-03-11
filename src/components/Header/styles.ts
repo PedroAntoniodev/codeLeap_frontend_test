@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 80px;
   background-color: #7695ec;
   padding: 16px 0;

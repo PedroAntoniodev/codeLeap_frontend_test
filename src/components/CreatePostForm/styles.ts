@@ -19,6 +19,10 @@ export const Card = styled.div`
 export const CardTitle = styled.h2`
   font-size: 22px;
   font-weight: 700;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 `;
 
 export const Form = styled.form`
@@ -26,10 +30,18 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 8px;
   margin-top: 16px;
+
+  @media (max-width: 1024px) {
+    gap: 4px;
+  }
 `;
 
 export const Label = styled.label`
   font-size: 16px;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
 `;
 
 export const Input = styled.input`
@@ -40,6 +52,12 @@ export const Input = styled.input`
   padding: 8px;
   font-size: 16px;
   margin-bottom: 24px;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    height: 24px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const TextArea = styled.textarea`
@@ -51,4 +69,10 @@ export const TextArea = styled.textarea`
   font-size: 16px;
   margin-bottom: 16px;
   resize: none;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
 `;

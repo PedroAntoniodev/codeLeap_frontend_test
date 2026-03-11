@@ -1,32 +1,31 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import * as S from "./styles";
 import { Button } from "../../styles/Button";
 
 const HomePage = () => {
   const [username, setUsername] = useState("");
+  const Navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!username.trim()) {
-      alert("Please enter your username");
-      return;
-    }
-
     localStorage.setItem("username", username);
+
+    Navigate("/main");
 
     console.log("User logged in:", username);
   };
   return (
     <S.HomePageContainer>
       <S.Card>
-        <S.CardTitle>Welcome to CodeLeap network</S.CardTitle>
+        <S.CardTitle>Welcome to CodeLeap network!</S.CardTitle>
         <S.Form onSubmit={handleSubmit}>
           <S.Label>Please enter your username</S.Label>
           <S.Input
             type="text"
-            placeholder="username"
+            placeholder="John Doe"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
